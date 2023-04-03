@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>Parte 1 - Banco de Dados</title>
+  </head>
+  <body>
+    <h1>Coloque suas informações</h1>
+    
+    <form action="#" th:action="@{/createUser}" th:object="${user}" method="post"> 
+     
+         <label>CPF:</label>
+        <input type="text" th:field="*{CPF}" />
+     
+        <label>Nome:</label>
+        <input type="text" th:field="*{name}" />
+        
+        <label>Data de nascimento:</label>
+        <input type="date" th:field="*{birthDate}" />
+        
+        <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
